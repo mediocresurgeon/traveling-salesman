@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "TravelingSalesman.Core", "TravelingSalesman.Core\TravelingSalesman.Core.fsproj", "{6FB933FA-A8A8-4CE1-80D3-BDBA90925A37}"
+EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "TravelingSalesman.Core.UnitTests", "TravelingSalesman.Core.UnitTests\TravelingSalesman.Core.UnitTests.fsproj", "{F2077E44-21E4-4969-9EBC-7894504E4F66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FB933FA-A8A8-4CE1-80D3-BDBA90925A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB933FA-A8A8-4CE1-80D3-BDBA90925A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB933FA-A8A8-4CE1-80D3-BDBA90925A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB933FA-A8A8-4CE1-80D3-BDBA90925A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
