@@ -1,16 +1,17 @@
 ﻿<Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
-
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <OtherFlags>--sig:Header.fsi</OtherFlags>
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="DTO.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="FSharp.Core" Version="4.1.*" />
     <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
   </ItemGroup>
-
 </Project>
