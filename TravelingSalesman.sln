@@ -5,6 +5,8 @@ Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "TravelingSalesman.Core", "T
 EndProject
 Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "TravelingSalesman.Core.UnitTests", "TravelingSalesman.Core.UnitTests\TravelingSalesman.Core.UnitTests.fsproj", "{F2077E44-21E4-4969-9EBC-7894504E4F66}"
 EndProject
+Project("{f2a71f9b-5d33-465a-a702-920d77279786}") = "TravelingSalesman.Application", "TravelingSalesman.Application\TravelingSalesman.Application.fsproj", "{AD1D9CCE-6465-49B0-8CBA-662FA1CCE1DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2077E44-21E4-4969-9EBC-7894504E4F66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1D9CCE-6465-49B0-8CBA-662FA1CCE1DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1D9CCE-6465-49B0-8CBA-662FA1CCE1DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1D9CCE-6465-49B0-8CBA-662FA1CCE1DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1D9CCE-6465-49B0-8CBA-662FA1CCE1DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
