@@ -15,6 +15,11 @@ module IO =
 // but had to be marked Public in order for the XmlSerializer to do work on them.
 // Hiding them from intellisense should make it clear that these items are not intended for public use.
 
+    /// <summary>
+    /// DTO used for deserializing GPX nodes.
+    /// Not intended for public use.
+    /// This object should not show up in Intellisense.
+    /// </summary>
     [<CLIMutable>]
     [<DataContract>]
     [<EditorBrowsable(EditorBrowsableState.Never)>]
@@ -27,6 +32,11 @@ module IO =
         Name : string
     }
 
+    /// <summary>
+    /// DTO used for serializing GPX nodes.
+    /// Not intended for public use.
+    /// This object should not show up in Intellisense.
+    /// </summary>
     [<DataContract>]
     [<EditorBrowsable(EditorBrowsableState.Never)>]
     type public WaypointOutput = {
@@ -40,6 +50,11 @@ module IO =
         Timestamp: DateTime
     }
 
+    /// <summary>
+    /// DTO used for deserializing GPX nodes.
+    /// Not intended for public use.
+    /// This object should not show up in Intellisense.
+    /// </summary>
     [<CLIMutable>]
     [<DataContract>]
     [<EditorBrowsable(EditorBrowsableState.Never)>]
@@ -49,6 +64,11 @@ module IO =
         Waypoints : WaypointInput array
     }
 
+    /// <summary>
+    /// DTO used for serializing GPX nodes.
+    /// Not intended for public use.
+    /// This object should not show up in Intellisense.
+    /// </summary>
     [<DataContract>]
     [<EditorBrowsable(EditorBrowsableState.Never)>]
     [<XmlRoot(ElementName = "gpx")>]
@@ -68,6 +88,9 @@ module IO =
             Timestamp = waypoint.Timestamp
         }
     
+    /// <summary>
+    /// Deserializes a Stream with GPX formatting into a collection of ordered Location objects.
+    /// </summary>
     let public ReadLocationsFromGpxStream (gpxFile:Stream) =
         let xmlSerializer = new XmlSerializer(typedefof<GpxInput>)
         let dataContractResult = xmlSerializer.Deserialize(gpxFile) :?> GpxInput // http://stackoverflow.com/questions/31616761/f-casting-operators
@@ -75,6 +98,9 @@ module IO =
             |> Array.toList
             |> List.map (fun wpt -> ConvertWaypointInputToLocation wpt)
 
+    /// <summary>
+    /// Serializes a collection of ordered Waypoint objects into a Stream with GPX formatting.
+    /// </summary>
     let public WriteWaypointsToGpxStream (waypoints:List<Waypoint>, gpxFile:Stream) = 
         let xmlSerializer = new XmlSerializer(typedefof<GpxOutput>)
         let gpx = { Waypoints = waypoints |> List.map (fun wpt -> ConvertWaypointToWaypointOutput wpt) |> List.toArray }
