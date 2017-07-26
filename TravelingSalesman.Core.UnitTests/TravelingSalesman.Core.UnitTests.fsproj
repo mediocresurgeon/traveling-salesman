@@ -4,10 +4,6 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DTOTest.fs" />
-    <Compile Include="Program.fs" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="FSharp.Core" Version="4.1.*" />
     <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
     <PackageReference Include="NUnit" Version="3.7.1" />
@@ -15,5 +11,14 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TravelingSalesman.Core\TravelingSalesman.Core.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Example.gpx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOTest.fs" />
+    <Compile Include="IOTest.fs" />
+    <Compile Include="Program.fs" />
+    <EmbeddedResource Include="Example.gpx" />
   </ItemGroup>
 </Project>
