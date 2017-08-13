@@ -5,11 +5,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
     <OtherFlags>--sig:Header.fsi</OtherFlags>
+    <DocumentationFile>bin\Debug\netstandard1.6\TravelingSalesman.Core.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="DTO.fs" />
     <Compile Include="IO.fs" />
+    <Compile Include="HaversineFormula.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FSharp.Core" Version="4.1.*" />

@@ -14,7 +14,7 @@ let ``degreesToRadians 0``() =
     let result = degreesToRadians testValue
 
     // Assert
-    let expectedValue = 0.0<radian>
+    let expectedValue = 0.0
     Assert.AreEqual(expectedValue, result)
 
 
@@ -27,7 +27,7 @@ let ``degreesToRadians 90``() =
     let result = degreesToRadians testValue
 
     // Assert
-    let expectedValue = 0.5<radian> * Math.PI
+    let expectedValue = 0.5 * Math.PI
     Assert.AreEqual(expectedValue, result)
 
 
@@ -40,7 +40,7 @@ let ``degreesToRadians 180``() =
     let result = degreesToRadians testValue
 
     // Assert
-    let expectedValue = 1.0<radian> * Math.PI
+    let expectedValue = 1.0 * Math.PI
     Assert.AreEqual(expectedValue, result)
 
 
@@ -53,7 +53,7 @@ let ``degreesToRadians 270``() =
     let result = degreesToRadians testValue
 
     // Assert
-    let expectedValue = 1.5<radian> * Math.PI
+    let expectedValue = 1.5 * Math.PI
     Assert.AreEqual(expectedValue, result)
 
 
@@ -66,5 +66,5 @@ let ``degreesToRadians 360``() =
     let result = degreesToRadians testValue
 
     // Assert
-    let expectedValue = 2.0<radian> * Math.PI
+    let expectedValue = 2.0 * Math.PI
     Assert.AreEqual(expectedValue, result)
