@@ -38,7 +38,7 @@ module HaversineFormula =
         let havΔLat = φ2 - φ1 |> hav
         let cosφ1 = cos φ1
         let cosφ2 = cos φ2
-        let havΔLong = λ2 - λ1 |> hav
+        let havΔLon = λ2 - λ1 |> hav
 
         // Pure formula:
         // distance = 2 radius arcsin( sqrt( hav(φ2 - φ1) + cos(φ1) * cos(φ2) * hav(λ2 - λ1) ) )
@@ -53,7 +53,7 @@ module HaversineFormula =
         // This requires intermediate steps and cannot be written as cleanly.
         // http://mathforum.org/library/drmath/view/51879.html
 
-        let a = havΔLat + (cosφ1 * cosφ2 * havΔLong)    // Determine intermediate result
+        let a = havΔLat + (cosφ1 * cosφ2 * havΔLon)    // Determine intermediate result
         let y = sqrt a                                  // Determine y component of atan2 function
         let x = 1.0 - a |> sqrt                         // Determine x component of atan2 function
         2.0 * atan2 y x
