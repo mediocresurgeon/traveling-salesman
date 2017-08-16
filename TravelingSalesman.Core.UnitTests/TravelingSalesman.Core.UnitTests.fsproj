@@ -19,6 +19,7 @@
     <Compile Include="DTOTest.fs" />
     <Compile Include="IOTest.fs" />
     <Compile Include="HaversineFormulaTest.fs" />
+    <Compile Include="VincentyFormulaTest.fs" />
     <Compile Include="Program.fs" />
     <EmbeddedResource Include="Example.gpx" />
   </ItemGroup>
