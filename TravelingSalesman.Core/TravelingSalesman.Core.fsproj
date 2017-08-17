@@ -13,6 +13,7 @@
     <Compile Include="IO.fs" />
     <Compile Include="HaversineFormula.fs" />
     <Compile Include="VincentyFormula.fs" />
+    <Compile Include="SimulatedAnnealing.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FSharp.Core" Version="4.1.*" />
