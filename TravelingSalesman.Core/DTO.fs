@@ -40,12 +40,15 @@ module DTO =
     /// <summary>
     /// Converts degrees to radians.
     /// </summary>
-    let internal degreesToRadians (degrees:float<degree>) = Math.PI / 180.0<degree> * degrees
+    let internal degreesToRadians (degrees:float<degree>) =
+        Math.PI / 180.0<degree> * degrees
 
     /// <summary>
     /// Reduces a degrees mesurement to its simplest form.
     /// </summary>
-    let internal simplifyDegrees (degrees:float<degree>) = degrees % 360.0<degree>
+    /// <returns>A value d where 0.0 <= d < 360.0</returns>
+    let internal simplifyDegrees (degrees:float<degree>) =
+        degrees % 360.0<degree>
 
     /// <summary>
     /// An object which specifies a named location on the surface of a sphere.
