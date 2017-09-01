@@ -1,15 +1,18 @@
 ﻿module TravelingSalesman.Core.UnitTests.IOTest
 
+
 open System.Reflection
 open NUnit.Framework
-open TravelingSalesman.Core.DTO
+open TravelingSalesman.Core.Common
 open TravelingSalesman.Core.IO
+
 
 // https://stackoverflow.com/questions/1175056/value-of-the-last-element-of-a-list#answer-1175123
 let rec last = function
     | hd :: [] -> hd
     | hd :: tl -> last tl
     | _ -> failwith "Empty list."
+
 
 [<Test>]
 let ``Deserialize Example.gpx``() = 

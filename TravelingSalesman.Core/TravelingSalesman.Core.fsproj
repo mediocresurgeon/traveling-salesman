@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="DTO.fs" />
+    <Compile Include="Common.fs" />
     <Compile Include="IO.fs" />
     <Compile Include="HaversineFormula.fs" />
     <Compile Include="VincentyFormula.fs" />

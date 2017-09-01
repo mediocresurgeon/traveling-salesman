@@ -1,6 +1,8 @@
 ﻿namespace TravelingSalesman.Core.Geodesics
 
-open TravelingSalesman.Core.DTO
+
+open TravelingSalesman.Core.Common
+
 
 /// <summary>
 /// An algorithm for determining the great circle distance between two points on a sphere.
@@ -8,6 +10,8 @@ open TravelingSalesman.Core.DTO
 /// Discovered by Don Josef de Mendoza y Rios in 1796.
 /// </summary>
 module HaversineFormula = 
+
+
     /// <summary>
     /// A little-used trigonometric function.
     /// </summary>

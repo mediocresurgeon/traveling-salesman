@@ -16,7 +16,7 @@
     <None Remove="Example.gpx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTOTest.fs" />
+    <Compile Include="CommonTest.fs" />
     <Compile Include="IOTest.fs" />
     <Compile Include="HaversineFormulaTest.fs" />
     <Compile Include="VincentyFormulaTest.fs" />

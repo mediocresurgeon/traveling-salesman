@@ -5,7 +5,7 @@ open System.ComponentModel
 open System.IO
 open System.Runtime.Serialization
 open System.Xml.Serialization
-open TravelingSalesman.Core.DTO
+open TravelingSalesman.Core.Common
 
 module IO = 
 

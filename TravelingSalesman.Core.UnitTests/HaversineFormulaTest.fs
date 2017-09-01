@@ -1,15 +1,19 @@
 ﻿module TravelingSalesman.Core.UnitTests.HaversineTest
 
+
 open System
 open NUnit.Framework
-open TravelingSalesman.Core.DTO
+open TravelingSalesman.Core.Common
 open TravelingSalesman.Core.Geodesics.HaversineFormula
+
 
 // We define a kilometer here, but we could just as easily use miles or fathoms if we wanted
 [<Measure>] type kilometer
 
+
 // The size of Earth
 let earthRadius = 6371.0<kilometer>
+
 
 /// <summary>
 /// A given calculation can contain compounded rounding errors.

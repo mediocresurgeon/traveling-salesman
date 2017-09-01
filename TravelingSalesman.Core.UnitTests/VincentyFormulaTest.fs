@@ -1,7 +1,7 @@
 ﻿module TravelingSalesman.Core.UnitTests.VincentyFormulaTest
 
 open NUnit.Framework
-open TravelingSalesman.Core.DTO
+open TravelingSalesman.Core.Common
 open TravelingSalesman.Core.Geodesics.VincentyFormula
 
 
@@ -37,8 +37,12 @@ let ``Pole to equator distance``() =
     let result = GetDistance (earthEquatorRadius, earthPolarRadius) loc1 loc2
 
     // Assert
-    Assert.IsTrue(result.IsSome)
-    Assert.AreEqual(10001.965729<kilometer>, roundDistance result.Value)
+    match result with
+    | Failure(error)      -> match error with
+                             | NoSolution(msg)   -> Assert.Fail(msg)
+                             | FailedToConverge -> Assert.Fail "Failed to converge."
+    | Success(distance) -> let roundedDistance = roundDistance distance
+                           Assert.AreEqual(10001.965729<kilometer>, roundedDistance)
 
 
 [<Test>]
@@ -52,5 +56,9 @@ let ``Quarter around equator distance``() =
     let result = GetDistance (earthEquatorRadius, earthPolarRadius) loc1 loc2
 
     // Assert
-    Assert.IsTrue(result.IsSome)
-    Assert.AreEqual(10001.965729<kilometer>, roundDistance result.Value)
+    match result with
+    | Failure(error)      -> match error with
+                             | NoSolution(msg)   -> Assert.Fail(msg)
+                             | FailedToConverge -> Assert.Fail "Failed to converge."
+    | Success(distance) -> let roundedDistance = roundDistance distance 
+                           Assert.AreEqual(10001.965729<kilometer>, roundedDistance)

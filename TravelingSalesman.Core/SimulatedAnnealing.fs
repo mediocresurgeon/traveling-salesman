@@ -1,11 +1,15 @@
 ﻿namespace TravelingSalesman.Core.TspAlgorithms
 
+
 open System
 open System.Collections.Generic
-open TravelingSalesman.Core.DTO
+open TravelingSalesman.Core.Common
 open TravelingSalesman.Core.Geodesics
 
+
 module SimulatedAnnealing = 
+
+
     /// <summary>
     /// Returns the next highest index of an array.
     /// If the input index is the final array element, index zero is returned.
